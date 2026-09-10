@@ -35,6 +35,8 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      overscroll-behavior-y: contain;
     }
 
     body {
@@ -61,6 +63,8 @@
       height: 100vh;
       height: 100svh;
       overflow: hidden;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
     }
 
     /* subtle paper grain shared by every section, ties the whole thing together */
@@ -820,8 +824,4 @@
       const target = document.getElementById(id);
       if (!target) return;
 
-      const top = target.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({ top: top, behavior: "smooth" });
-    }
-
-    
+  
