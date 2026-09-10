@@ -818,7 +818,10 @@
     createStars("welcomeStars", 110);
     createStars("heroStars", 110);
 
-    /* ---------- ABRIR SURPRESA ---------- */
+    /* ---------- SCROLL ---------- */
 
-    document.getElementById("openButton").addEventListener("click", function () {
-      document.getEleme
+    function scrollToSection(id) {
+      const target = document.getElementById(id);
+      if (!target) return;
+
+    
